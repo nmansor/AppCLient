@@ -1,0 +1,25 @@
+.container {
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+}
+#input-form {
+    position: absolute;
+    z-index: 1;
+}
+#input-form input {
+    position: absolute;
+    background: transparent;
+    border: 1px solid red;
+}
+.text-center {
+    margin-left: 200px;
+}
+.wide-class {
+    width: 100%;
+    display: block;
+    border: 1px  solid red;
+}
+.narrow-class {
+    display: hide;
+}

@@ -1,0 +1,73 @@
+
+<!-- <div>
+    <mat-label for="month" i18n="@@Month" class="label"> Month</mat-label>
+    
+        <select (change)="onMonthChange($event)">
+          <option i18n="@@ChooseMonth">Choose Month</option>
+          <option *ngFor="let m of months " [value]="m">{{m}}</option>
+      </select>
+  
+
+    <mat-label for="year" i18n="@@Year" class="label"> Year</mat-label>
+      <select (change)="onYearSelected($event)">
+          <option i18n="@@ChooseYear">Choose Year</option>
+          <option *ngFor="let y of years "  [value]="y">{{y}} </option>
+      </select>
+  
+    <button mat-icon-button> <mat-icon  (click)="onGetAgeements()">load agreements</mat-icon></button>
+  </div> -->
+  <div class="mat-elevation-z8">
+    <mat-table class="full-width-table" [dataSource]="dataSource" matSort aria-label="Elements">
+      <!-- Id Column -->
+      <ng-container   matColumnDef="id">
+        <th mat-header-cell  *matHeaderCellDef mat-sort-header>Id</th>
+        <td mat-cell  *matCellDef="let element">{{element.id}}</td>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container class="largeCol" matColumnDef="title">
+        <th mat-header-cell  *matHeaderCellDef mat-sort-header>Title</th>
+        <td mat-cell class="mediumCol" *matCellDef="let element">{{element.title}}</td>
+      </ng-container>
+      <ng-container  matColumnDef="agreementDate" i18n="@@AgreementDate">
+        <th mat-header-cell class='mediumCol' *matHeaderCellDef mat-sort-header>Agreement Date</th>
+        <td mat-cell  *matCellDef="let element">{{ element.agreementDate | date:'dd/MM/yyyy' }}</td>
+      </ng-container>
+      <ng-container  matColumnDef="status" i18n="@@Status">
+        <th mat-header-cell class="smallCol" *matHeaderCellDef mat-sort-header>Status</th>
+        <td mat-cell class="smallCol" *matCellDef="let element">{{element.status}}</td>
+      </ng-container>
+      <ng-container matColumnDef="dateCompleted" i18n="@@DateCompleted">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Date Completed</th>
+        <td mat-cell class="smallCol" *matCellDef="let element">{{ element.dateCompleted | date:'dd/MM/yyyy' }}</td>
+      </ng-container>
+      <ng-container matColumnDef="action">
+        <mat-header-cell *matHeaderCellDef></mat-header-cell>
+        <mat-cell class='smallCol'  *matCellDef="let element">
+            <a href="{{docPath}}{{element.id}}" target = "_blank" class = "btn btn-success" ><mat-icon>pageview</mat-icon></a>
+            <button mat-icon-button color="warn" title="delete"> <mat-icon  (click)="onDelete(element.id)">delete_forever</mat-icon></button>
+          </mat-cell>
+      </ng-container>
+
+    <ng-container matColumnDef="noData" ng-class="{'hide':dataSource  == null }">
+        <mat-footer-cell *matFooterCellDef [ngClass]="{'hide': !(dataSource != null && dataSource?.data?.length == 0)}">
+            No Data
+        </mat-footer-cell>
+    </ng-container> 
+    <ng-container matColumnDef="loading">
+      <mat-footer-cell *matFooterCellDef [ngClass]="{hide: dataSource!=null}">Loading Data ...</mat-footer-cell>
+    </ng-container>
+  <ng-container> 
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let element; columns: displayedColumns"></mat-row>
+    <mat-footer-row *matFooterRowDef="['loading']"></mat-footer-row>
+    <mat-footer-row *matFooterRowDef="['noData']"></mat-footer-row>
+  </ng-container> 
+  </mat-table>
+  <mat-paginator [length]="dataLength"
+      [pageIndex]="0"
+      [pageSize]="10"
+      [pageSizeOptions]="[10, 25, 50, 100, 200]"
+      showFirstLastButtons >
+  </mat-paginator>
+</div>

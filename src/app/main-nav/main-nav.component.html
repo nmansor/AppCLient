@@ -1,0 +1,40 @@
+ <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <button mat-icon-button style="margin:10px">
+            <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+      </button>
+      <h1>webApp</h1>
+      <span class="menu-spacer"></span>
+      <div>
+        <a mat-button routerLink="/home"><span class="material-icons">home</span></a>
+        <a mat-button routerLink="/login">Login</a>
+        <a mat-button routerLink="/register">Register</a>
+        <a mat-button routerLink="/logout">Logout</a>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #sidenav class="sidenav" >
+      <mat-nav-list>
+        <a mat-list-item  routerLink="/users">Users</a>
+        <a mat-list-item  routerLink="/update-myprofile">Update Profile</a>
+        <span>المحررات</span>
+        <a mat-list-item routerLink="/create-document">Create Agreement</a>
+        <a mat-list-item routerLink="/view-agreement">عرض المستند</a>
+        <select    (change)="onDocumentSelect($event)">
+          <option >Choose Document</option>
+          <option *ngFor="let d of documents " [value]="d.templateName">{{d.name}}</option>
+        </select>
+        <a mat-list-item  routerLink="/agreements">قائمة </a>
+        <span>التصديقات</span>
+        <a mat-list-item  routerLink="/agreements">قائمة</a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div style="height: 88vh;">
+    
+          <router-outlet></router-outlet>
+        </div>
+      </mat-sidenav-content>
+  </mat-sidenav-container>
+

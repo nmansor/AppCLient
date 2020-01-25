@@ -1,0 +1,103 @@
+<form [formGroup]="registerForm" novalidate (ngSubmit)="onSave(registerForm)">
+  <mat-card class="registering-card">
+    <mat-card-header>
+      <mat-card-title i18n="@@PgTitleRegisterInformation">Register Information</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput i18n-placeholder="firstName@@FirstName" placeholder="First name"  formControlName="firstName">
+            <mat-error *ngIf="registerForm.controls['firstName'].hasError('required')">
+              First name is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput i18n-placeholder="fatherName @@FatherName" placeholder="Father name"  formControlName="fatherName">
+            <mat-error *ngIf="registerForm.controls['fatherName'].hasError('required')">
+              Father name is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Family name" i18n-placeholder="familyName  @@FamilyName" formControlName="familyName">
+            <mat-error *ngIf="registerForm.controls['familyName'].hasError('required')">
+              Family name is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="email" i18n-placeholder="email @@Email" formControlName="email">
+            <mat-error *ngIf="registerForm.controls['email'].hasError('required')">
+             Email is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput  maxlength="10" placeholder="mobilePhone" i18n-placeholder="phone @@Phone" formControlName="mobilePhone">
+            <mat-error *ngIf="registerForm.controls['mobilePhone'].hasError('required')">
+                Phone is <strong>required</strong>
+               </mat-error>
+            <!-- <mat-hint align="end">{{mobilePhone.value.length}} /10</mat-hint> -->
+          </mat-form-field>
+        </div>
+      </div>
+    
+      <!-- <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <textarea matInput placeholder="address" i18n-placeholder="@@Address" formControlName="address"></textarea>
+            <mat-error *ngIf="registerForm.controls['address'].hasError('required')">
+              Address is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <mat-select placeholder="City" i18n-placeholder="@@City" formControlName="cityId">
+              <mat-option *ngFor="let city of cities" [value]="city.id">
+                {{ city.name }}
+              </mat-option>
+            </mat-select>
+            <mat-error *ngIf="registerForm.controls['cityId'].hasError('required')">
+              City is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+    -->
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput type="password" placeholder="password" i18n-placeholder="password@@Password" formControlName="password" >
+            <mat-error *ngIf="registerForm.controls['password'].hasError('required')">
+              Password is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col"></div>
+      </div> 
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput type="password" placeholder="confirm Password" i18n-placeholder="password@@Password" formControlName="confirmPassword" >
+            <mat-error *ngIf="registerForm.controls['confirmPassword'].hasError('required')">
+             confirm  Password is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col"></div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" type="submit" i18n="@@Submit">Submit</button>
+    </mat-card-actions>
+  </mat-card>
+</form>

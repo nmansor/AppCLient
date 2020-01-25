@@ -1,0 +1,31 @@
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+  }
+  
+  .col {
+      width: 180px;
+    box-sizing: border-box;
+  }
+
+  .label {
+      color: blue;
+      box-sizing: border-box;
+      flex: 1;
+  }
+
+  .value {
+    box-sizing: border-box;
+    flex: 3;
+  }
+  .title {
+    color: green
+  }
+  th {
+    color: blue; 
+  }
+.center {
+    text-align: center;
+}
+  

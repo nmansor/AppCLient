@@ -1,0 +1,145 @@
+<h3 class="text-center">
+  عـقـد تـأسـيـس
+</h3>
+
+<form [formGroup]="myForm" novalidate (ngSubmit)="onSave(myForm)">
+  <table>
+    <tr>
+      <td>
+        <mat-label for="CompanyName" class="label"> إسم الشـركةالقابضــة  </mat-label>
+        <mat-form-field>
+           <input matInput formControlName="CompanyName" /> 
+          <mat-error>
+            <span *ngIf="!myForm.controls.CompanyName.valid && myForm.controls.CompanyName.touched">Please enter
+              إسم الشـركة</span>
+          </mat-error>
+        </mat-form-field>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <mat-label for="HourTime" class="label">انه في تمام الساعة </mat-label>
+        <mat-form-field>
+          <input matInput formControlName="HourTime" />
+          <mat-error>
+            <span *ngIf="!myForm.controls.HourTime.valid && myForm.controls.HourTime.touched">Please enter employee
+              الساعة</span>
+          </mat-error>
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-label for="DayOfTheWeek" class="label">من يوم </mat-label>
+        <mat-form-field>
+          <input matInput formControlName="DayOfTheWeek" />
+          <mat-error>
+            <span *ngIf="!myForm.controls.DayOfTheWeek.valid && myForm.controls.DayOfTheWeek.touched">Please enter employee
+              يوم</span>
+          </mat-error>
+        </mat-form-field>
+      </td>
+      </tr>
+      <tr>
+        <td>
+        <mat-label for="DateCreated" class="label">الموافق لليوم</mat-label>
+        <mat-form-field>
+          <input matInput formControlName="DateCreated" />
+          <mat-error>
+            <span *ngIf="!myForm.controls.DateCreated.valid && myForm.controls.DateCreated.touched">Please enter
+               تاريخ</span>
+          </mat-error>
+        </mat-form-field>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <mat-label for="NotarizerName" class="label">أمامي أنا</mat-label>
+        <mat-form-field>
+          <input matInput formControlName="NotarizerName" />
+          <mat-error>
+            <span *ngIf="!myForm.controls.NotarizerName.valid && myForm.controls.NotarizerName.touched">Please enter
+              Notarizer name</span>
+          </mat-error>
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-label for="RegisteredCourtName" class="label">محرر العقود الرسمية بدائرة محكمة استئناف </mat-label>
+        <mat-form-field>
+          <input matInput formControlName="RegisteredCourtName" />
+          <mat-error>
+            <span
+              *ngIf="!myForm.controls.RegisteredCourtName.valid && myForm.controls.RegisteredCourtName.touched">Please
+              court name</span>
+          </mat-error>
+        </mat-form-field>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <mat-label for="NotarizerRegistrationNumber" class="label">محرري العقود رقم </mat-label>
+        <mat-form-field>
+          <input matInput formControlName="NotarizerRegistrationNumber" />
+          <mat-error>
+            <span
+              *ngIf="!myForm.controls.NotarizerRegistrationNumber.valid && myForm.controls.NotarizerRegistrationNumber.touched">Please
+              Registeration Number</span>
+          </mat-error>
+        </mat-form-field>
+      </td>
+    </tr>
+ 
+      <tr>
+        وبحضور كل من :-
+      </tr>
+      <tr formArrayName="Partners">
+          <table class="table">
+              <thead>
+                  <tr>
+                      <th> <mat-label class="label" >Company Name </mat-label></th>
+                      <th> <mat-label class="label ">Duputy Name </mat-label></th> 
+                      <th> <mat-label class="label ">Duputy ID Number </mat-label></th>                    
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr *ngFor="let item of myForm['controls'].Partners['controls']; let i=index" formGroupName="{{i}}">
+                      <td>          
+                          <mat-form-field>
+                              <input  matInput formControlName="PartnerCompanyName">
+                          </mat-form-field>
+                      </td> 
+                      <td>                         
+                          <mat-form-field>
+                              <input  matInput formControlName="DeputyName">                             
+                          </mat-form-field>
+                      </td> 
+                      <td> 
+                          <mat-form-field>
+                              <input  matInput formControlName="DeputyIDNumber">
+                          </mat-form-field>
+                      </td>              
+                      <!-- <td *ngIf='myForm.controls.length > 1 '> -->
+                        <td>
+                          <button mat-icon-button color="warn" title="delete"> <mat-icon  (click)="removeItem(i)">delete_forever</mat-icon></button>
+                      </td>
+                  </tr>
+              </tbody>
+          </table>
+      </tr>
+      <tr>
+          <td></td>
+          <td>
+              <button mat-mini-fab type="button" (click)="addItem()" style="cursor: default">                             
+                  <mat-icon>add</mat-icon>
+              </button>
+          </td>
+      </tr>
+  </table>
+  <div class="set-top-margin">
+    <button mat-raised-button type="submit" color="primary"  >
+      Submit
+    </button>
+    <button mat-raised-button type="button" color="warn" (click)="resetForm(myForm)" i18n='@@CancelBtn'>
+      reset
+    </button>
+  </div>
+</form>

@@ -1,0 +1,24 @@
+.card {
+    max-width: 200px;
+    max-height: 100px;
+  }
+  
+  .flexbox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /*justify-content:; */ /*space-between */
+  }
+  .col {
+     flex: 3
+  }
+
+  .green-icon {
+    color: green;
+}
+/* Note: If you're using an SVG icon, you should make the class target the `<svg>` element */
+.green-icon svg {
+    fill: green;
+}
+ 
+  

@@ -1,0 +1,47 @@
+<div class="flexbox">
+  <div class="col">
+    <!-- <mat-label for="month" i18n="@@Month" class="label"> Month</mat-label> -->
+    <select (change)="onMonthChange($event)">
+      <option i18n="@@ChooseMonth">Choose Month</option>
+      <option *ngFor="let m of months " [value]="m">{{m}}</option>
+    </select>
+ 
+    <!-- <mat-label for="year" i18n="@@Year" class="label"> Year</mat-label> -->
+    <select (change)="onYearSelected($event)">
+      <option i18n="@@ChooseYear">Choose Year</option>
+      <option *ngFor="let y of years " [value]="y">{{y}} </option>
+    </select>
+     <span style="margin-left: 20px">
+       <button mat-icon-button   (click)="onGetAgeements()"> 
+         <mat-icon class="green-icon">autorenew </mat-icon>
+        </button>
+     </span>
+  </div>
+  <div class="col">
+    <button mat-mini-fab  (click)="onAddAgeement()">
+      <mat-icon class="green-icon">add</mat-icon>
+    </button> محرر
+    <span style="margin-left: 40px;">
+      <button mat-mini-fab  (click)="onGetAgeements()">
+        <mat-icon [ngStyle]="{'color': color}">add</mat-icon>
+      </button>
+    </span>مصدق 
+    </div>
+</div>
+<hr>
+
+<div class="flexbox">
+  <mat-card class="card" *ngFor="let item of statusList;">
+    <mat-card-header>
+      <mat-card-title>محررات</mat-card-title>
+      <mat-card-subtitle>{{item.status}} </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>
+        <button (click)='getAgreements(item?.statusId);'>{{item?.count}} </button>
+      </p>
+    </mat-card-content>
+  </mat-card>
+</div>
+<app-display-agreements [dataLength]="0" [dataSource]="agreementsList"></app-display-agreements>
+<router-outlet></router-outlet>

@@ -1,0 +1,22 @@
+.full-width-table {
+  width: 100%;
+}
+
+.hide {
+  display: none;
+}
+.smallCol{
+    width: 75px;
+}
+
+.mediumCol{
+  width: 150px;
+}
+
+.largeCol{
+  width: 275px;
+}
+
+mat-footer-row mat-footer-cell{
+  justify-content: center;
+}

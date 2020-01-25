@@ -1,0 +1,10 @@
+.top {
+    top: 20px;
+}
+
+.yes {
+    background-color: red;
+}
+.no {
+    background-color: green
+}

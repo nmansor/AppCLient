@@ -1,0 +1,36 @@
+<div class="container">
+    <!-- Little trick to center the inputs to the viewer -->
+    <div class="form-container">
+        <form id="input-form"  [formGroup]="myForm" novalidate (ngSubmit)="onSave(myForm)">
+        
+            <!-- <input katInput type="=hidden"  formControlName= "agreementFormName" />
+            -->
+            <!-- Cycle through all the inputs -->
+            <div *ngFor="let input of inputList">
+                
+                <!-- Insert an input accordingly and get the style/position from the component -->
+                <input type="text"
+                    [name]="input.name"
+                    [formControlName]="input.name" 
+                    [value]="input.value" 
+                    [ngStyle]="getInputPosition(input)">
+                    
+            </div>
+            <div class="text-center">
+                <button type="submit" [disabled]="myForm.pristine" >Review</button>
+                <button type="reset" (click)="revert()" [disabled]="myForm.pristine">Revert</button>
+            
+                <button type="button" (click)="onAccept(myForm)" [disabled]="myForm.pristine" class="text-center">Accept</button>
+            </div>
+        </form>
+    </div>
+    <!-- <div [class.narrow-class]="!reviewDoc"> -->
+    
+       <pdf-viewer id="viewer" [render-text]="true" [show-all]="true" [page]="page" [src]="pdfSrc" (after-load-complete)="loadComplete($event)"></pdf-viewer>
+    <!-- </div> -->
+    <div [class.wide-class]="reviewDoc">
+      <pdf-viewer id="viewer2" [render-text]="true" [show-all]="true"  [src]="pdfSrc2"   [external-link-target]="'blank'" style="display: block;"></pdf-viewer> 
+    </div>
+</div>
+
+

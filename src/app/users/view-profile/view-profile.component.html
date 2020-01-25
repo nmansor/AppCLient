@@ -1,0 +1,75 @@
+<mat-card class="registering-card">
+  <mat-card-header>
+    <mat-card-title class="title">View Notarizer Profile</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+
+    <div class="row">
+      <mat-label class="label" i18n="@@FirstName"> Name </mat-label>
+      <span class="value"> {{profile?.firstName}} {{profile?.familyName}}</span>
+
+      <mat-label class="label" i18n="@@UserName"> User Name </mat-label>
+      <span class="value"> {{profile?.userName}}</span>
+    </div>
+
+    <div class="row">
+      <mat-label class="label" i18n="@@Phone"> Land Phone </mat-label>
+      <span class="value"> {{profile?.landPhone}}</span>
+
+      <mat-label class="label" i18n="@@Phone"> Mobile Phone </mat-label>
+      <span class="value"> {{profile?.mobilePhone}}</span>
+    </div>
+
+    <div class="row">
+      <mat-label class="label" i18n="@@Address"> Address</mat-label>
+      <span class="value"> {{profile?.address}}</span>
+
+      <mat-label class="label" i18n="@@City"> City</mat-label>
+      <span class="value"> {{profile?.city}}</span>
+    </div>
+
+    <div class="row">
+      <mat-label class="label" i18n="@@Court" class="label"> Court</mat-label>
+      <span class="value"> {{profile?.court}}</span>
+      <mat-label class="label"> Court Registration No </mat-label>
+      <span class="value"> {{profile?.courtRegistrationNo}}</span>
+    </div>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-flat-button color="warn" (click)='openDialog();'>Update User Status </button>
+  </mat-card-actions>
+</mat-card>
+<mat-card>
+  <!-- <p *ngIf="!profile.documents; else showTable"> 
+             No Qualification Documents
+        </p> -->
+  <mat-card-header>
+    <mat-card-title class="title" i18n="@@NotarizerDocument">Notarizers Documents</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <table style="width:75%">
+      <thead>
+        <th class="col center">Name</th>
+        <th class="col center">Verified?</th>
+        <th class="col center">Date Uploaded</th>
+        <th></th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let doc of profile?.documents">
+          <td class="col center">{{doc?.documentName}}</td>
+          <td class="col center">{{doc?.verified}}</td>
+          <td class="col center">{{doc?.dateUploaded | date: 'dd/MM/yyyy' }}</td>
+          <td class="col center">
+            <a mat-icon-button href="{{docPath}}{{doc?.id}}" target="_blank" class="btn btn-success">
+              <mat-icon>pageview</mat-icon>
+            </a>
+            <button mat-icon-button color="warn" title="delete">
+              <mat-icon (click)="onDelete(doc.id)">delete_forever</mat-icon>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </mat-card-content>
+</mat-card>
+<hr>

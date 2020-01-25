@@ -1,0 +1,124 @@
+<form [formGroup]="NotarizerFrm" novalidate (ngSubmit)="onSave(NotarizerFrm)">
+  <mat-card class="registering-card">
+    <mat-card-header>
+      <mat-card-title>Update Notarizer Profile</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+   
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="mobile phone" formControlName="mobilePhone">
+            <mat-error *ngIf="NotarizerFrm.controls['mobilePhone'].hasError('required')">
+              phone is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="land phone" formControlName="landPhone">
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="courtRegistrationNumber" formControlName="courtRegistrationNumber">
+            <mat-error *ngIf="NotarizerFrm.controls['courtRegistrationNumber'].hasError('required')">
+              Court registration number is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col"></div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <textarea matInput placeholder="Address" formControlName="address"></textarea>
+            <mat-error *ngIf="NotarizerFrm.controls['address'].hasError('required')">
+              Address is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col"></div>
+      </div>
+  
+   
+ 
+      <div>
+        <mat-label for="cityId" i18n="@@City" class="label"> City</mat-label>
+        <mat-form-field>
+            <mat-select  formControlName="cityId" >
+            <mat-option i18n="@@ChooseCity">Choose City</mat-option>
+            <mat-option *ngFor="let c of cities " [value]="c.id">{{c.name}}</mat-option>
+            </mat-select>
+                <mat-error>
+                <span *ngIf="!NotarizerFrm.controls.cityId.valid && NotarizerFrm.controls.cityId.touched">Please select city name</span>
+            </mat-error>  
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-label for="courtId" i18n="@@Court" class="label"> Court</mat-label>
+        <mat-form-field>
+            <mat-select  formControlName="courtId" >
+            <mat-option i18n="@@ChooseCourt">Choose Court</mat-option>
+            <mat-option *ngFor="let c of courts " [value]="c.id">{{c.name}}</mat-option>
+            </mat-select>
+                <mat-error>
+                <span *ngIf="!NotarizerFrm.controls.courtId.valid && NotarizerFrm.controls.courtId.touched">Please select court name</span>
+            </mat-error>  
+        </mat-form-field>
+      </div>
+
+        <!-- <div class="col">Update Court
+          <mat-form-field >
+            <select>
+              <option >Choose Court Name</option>
+              <option *ngFor="let c of courts " [value]="c.name">{{c.name}}</option>
+            </select>
+          </mat-form-field>
+        </div> -->
+      
+        <!-- <div class="row">
+           <div class="col">
+              <button type="button" mat-raised-button (click)="fileInput.click()">Choose File</button>
+              <input hidden (change)="onFileSelected()" #fileInput type="file" id="file">
+            </div>
+        </div> -->
+     
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" type="submit">Submit</button>
+    </mat-card-actions>
+  </mat-card>
+</form>
+<hr>
+<!-- <form [formGroup]="NotarizerFrm" novalidate (ngSubmit)="onSave(NotarizerFrm)"> -->
+  <mat-card class="registering-card">
+    <mat-card-header>
+      <mat-card-title>Upload Notarizer Documents</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <mat-label for="documentId" i18n="@@Document" class="label"> Document</mat-label>
+        <mat-form-field>
+            <mat-select  formControlName="documentId" >
+            <mat-option i18n="@@ChooseDocument">Choose Document</mat-option>
+            <mat-option *ngFor="let d of qualificationDocuments " [value]="d.id">{{d.name}}</mat-option>
+            </mat-select>
+                <mat-error>
+                <span *ngIf="!NotarizerFrm.controls.documentId.valid && NotarizerFrm.controls.documentId.touched">Please select document name</span>
+            </mat-error>  
+        </mat-form-field>
+
+        <div class="row">
+           <div class="col">
+              <button type="button" mat-raised-button (click)="fileInput.click()">Choose File</button>
+              <!-- <input  hidden type="file" (change)="uploadPhoto($event)" #inputFile formControlName="picFile" multiple > -->
+              <input hidden (change)="onFileSelected($event)" #fileInput type="file" id="file">
+            </div>
+        </div>
+    </mat-card-content>
+  </mat-card>
+<!-- </form> -->

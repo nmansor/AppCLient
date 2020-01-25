@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="PgTitleRegisterInformation" datatype="html">
+        <source>Register Information</source>
+        <target>تسجيل المعلومات</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user/register/register.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+            <trans-unit id="FirstName" datatype="html">
+        <source>First name</source>
+        <target>الاسم الاول</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user/register/register.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <note priority="1" from="description">firstName</note>
+      </trans-unit>
+      <trans-unit id="FatherName" datatype="html">
+        <source>Father name</source>
+         <target>اسم الأب</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user/register/register.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <note priority="1" from="description">fatherName </note>
+      </trans-unit>
+      <trans-unit id="LastName" datatype="html">
+        <source>Last name</source>
+        <target>اللقب</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user/register/register.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+        <note priority="1" from="description">lastName  </note>
+      </trans-unit>
+
+            <trans-unit id="FamilyName" datatype="html">
+        <source>Family name</source>
+        <target>اللقب</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user/register/register.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+        <note priority="1" from="description">familyName  </note>
+      </trans-unit>
+
+         <trans-unit id="Email" datatype="html">
+        <source>email</source>
+        <target>البريد الإلكتروني</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user/register/register.component.html</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+        <note priority="1" from="description">email </note>
+      </trans-unit>
+      <trans-unit id="Phone" datatype="html">
+        <source>phone</source>
+        <target>الهاتف</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user/register/register.component.html</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+        <note priority="1" from="description">phone </note>
+      </trans-unit>
+
+         <trans-unit id="Name" datatype="html">
+        <source> Name </source>
+        <target> الإسم </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/users/view-profile/view-profile.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="UserName" datatype="html">
+        <source> User Name </source>
+        <target>اسم المستخدم</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/users/view-profile/view-profile.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="Address" datatype="html">
+        <source>address</source>
+        <target>العنوان</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user/register/register.component.html</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+      </trans-unit>
+     
+      <trans-unit id="NotarizerDocument" datatype="html">
+        <source>Notarizers Documents</source>
+        <target>وثائق الموثق</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/users/view-profile/view-profile.component.html</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a6f472ecbae9c5a8085d2ea5c45448fa88b403f1" datatype="html">
+        <source> Date Created</source>
+        <target> تاريخ التدوين</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/create-document-base/create-document-base.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <note priority="1" from="description">Date Created placeholder</note>
+      </trans-unit>
+      <trans-unit id="CustomerName" datatype="html">
+        <source>Customer Name</source>
+        <target>اسم الزبون</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/create-document-base/create-document-base.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="644a4fd2f6d02ab24859a5c440a980f67a5f7f47" datatype="html">
+        <source>Withness Name</source>
+        <target>اسم الشاهد</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/create-document-base/create-document-base.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+        <note priority="1" from="description">Withness Name placeholder</note>
+      </trans-unit>
+       <trans-unit id="4b0ca852bafa5037c4e64c7b18f9cd1e14b799de" datatype="html">
+        <source>Subject</source>
+         <target>الموضوع</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/create-document-base/create-document-base.component.html</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+        <note priority="1" from="description">Subject placeholder</note>
+      </trans-unit>
+      <trans-unit id="Submit" datatype="html">
+        <source>Submit</source>
+        <target>أدخل</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user/register/register.component.html</context>
+          <context context-type="linenumber">86</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="City" datatype="html">
+        <source> City</source>
+        <target> مدينة</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user/update-profile/update-myprofile.component.html</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ChooseCity" datatype="html">
+        <source>Choose City</source>
+        <target>اختر مدينة</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user/update-profile/update-myprofile.component.html</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="Court" datatype="html">
+        <source> Court</source>
+         <target> المحكمة</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user/update-profile/update-myprofile.component.html</context>
+          <context context-type="linenumber">67</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ChooseCourt" datatype="html">
+        <source>Choose Court</source>
+          <target>اختر المحكمة</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user/update-profile/update-myprofile.component.html</context>
+          <context context-type="linenumber">70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="Document" datatype="html">
+        <source> Document</source>
+        <target> وثيقة</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user/update-profile/update-myprofile.component.html</context>
+          <context context-type="linenumber">108</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ChooseDocument" datatype="html">
+        <source>Choose Document</source>
+        <target>اختر المستند</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user/update-profile/update-myprofile.component.html</context>
+          <context context-type="linenumber">111</context>
+        </context-group>
+      </trans-unit>
+
+        <trans-unit id="AgreementDate" datatype="html">
+        <source>
+        <x id="START_TABLE_HEADER_CELL" ctype="x-th" equiv-text="&lt;th&gt;"/>Agreement Date<x id="CLOSE_TABLE_HEADER_CELL" ctype="x-th" equiv-text="&lt;/th&gt;"/>
+        <x id="START_TABLE_CELL" ctype="x-td" equiv-text="&lt;td&gt;"/><x id="INTERPOLATION" equiv-text="{{ element.agreementDate | date:&apos;dd/MM/yyyy&apos; }}"/><x id="CLOSE_TABLE_CELL" ctype="x-td" equiv-text="&lt;/td&gt;"/>
+      </source>
+         <target>
+        <x id="START_TABLE_HEADER_CELL" ctype="x-th" equiv-text="&lt;th&gt;"/>تاريخ الاتفاقية<x id="CLOSE_TABLE_HEADER_CELL" ctype="x-th" equiv-text="&lt;/th&gt;"/>
+        <x id="START_TABLE_CELL" ctype="x-td" equiv-text="&lt;td&gt;"/><x id="INTERPOLATION" equiv-text="{{ element.agreementDate | date:&apos;dd/MM/yyyy&apos; }}"/><x id="CLOSE_TABLE_CELL" ctype="x-td" equiv-text="&lt;/td&gt;"/>
+      </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/agreements/agreements-list/agreements-list.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="Status" datatype="html">
+        <source>
+        <x id="START_TABLE_HEADER_CELL" ctype="x-th" equiv-text="&lt;th&gt;"/>Status<x id="CLOSE_TABLE_HEADER_CELL" ctype="x-th" equiv-text="&lt;/th&gt;"/>
+        <x id="START_TABLE_CELL" ctype="x-td" equiv-text="&lt;td&gt;"/><x id="INTERPOLATION" equiv-text="{{element.status}}"/><x id="CLOSE_TABLE_CELL" ctype="x-td" equiv-text="&lt;/td&gt;"/>
+      </source>
+        <target>
+        <x id="START_TABLE_HEADER_CELL" ctype="x-th" equiv-text="&lt;th&gt;"/>الحالة<x id="CLOSE_TABLE_HEADER_CELL" ctype="x-th" equiv-text="&lt;/th&gt;"/>
+        <x id="START_TABLE_CELL" ctype="x-td" equiv-text="&lt;td&gt;"/><x id="INTERPOLATION" equiv-text="{{element.status}}"/><x id="CLOSE_TABLE_CELL" ctype="x-td" equiv-text="&lt;/td&gt;"/>
+      </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/agreements/agreements-list/agreements-list.component.html</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="DateCompleted" datatype="html">
+        <source>
+        <x id="START_TABLE_HEADER_CELL" ctype="x-th" equiv-text="&lt;th&gt;"/>Date Completed<x id="CLOSE_TABLE_HEADER_CELL" ctype="x-th" equiv-text="&lt;/th&gt;"/>
+        <x id="START_TABLE_CELL" ctype="x-td" equiv-text="&lt;td&gt;"/><x id="INTERPOLATION" equiv-text="{{ element.dateCompleted | date:&apos;dd/MM/yyyy&apos; }}"/><x id="CLOSE_TABLE_CELL" ctype="x-td" equiv-text="&lt;/td&gt;"/>
+      </source>
+         <target>
+        <x id="START_TABLE_HEADER_CELL" ctype="x-th" equiv-text="&lt;th&gt;"/>تاريخ الانتهاء<x id="CLOSE_TABLE_HEADER_CELL" ctype="x-th" equiv-text="&lt;/th&gt;"/>
+        <x id="START_TABLE_CELL" ctype="x-td" equiv-text="&lt;td&gt;"/><x id="INTERPOLATION" equiv-text="{{ element.dateCompleted | date:&apos;dd/MM/yyyy&apos; }}"/><x id="CLOSE_TABLE_CELL" ctype="x-td" equiv-text="&lt;/td&gt;"/>
+      </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/agreements/agreements-list/agreements-list.component.html</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+
+       <trans-unit id="Password" datatype="html">
+        <source>password</source>
+        <target>كلمة السر</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user/register/register.component.html</context>
+          <context context-type="linenumber">79</context>
+        </context-group>
+        <note priority="1" from="description">password</note>
+      </trans-unit>
+      <trans-unit id="Month" datatype="html">
+        <source> Month</source>
+        <target> شهر</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/users/list-users/list-users.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/agreements/agreements-list/agreements-list.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ChooseMonth" datatype="html">
+        <source>Choose Month</source>
+         <target>اختر الشهر</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/users/list-users/list-users.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/agreements/agreements-list/agreements-list.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="Year" datatype="html">
+        <source> Year</source>
+         <target> سنة</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/users/list-users/list-users.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/agreements/agreements-list/agreements-list.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ChooseYear" datatype="html">
+        <source>Choose Year</source>
+          <target>اختر السنة</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/users/list-users/list-users.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/agreements/agreements-list/agreements-list.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="CancelBtn" datatype="html">
+      <source>reset</source>
+       <target>إعادة</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/agreements/create-document/create-document.component.html</context>
+          <context context-type="linenumber">141</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,63 @@
+<form [formGroup]="myForm" novalidate (ngSubmit)="onSave(myForm)">
+  <table>
+    <tr>
+      <td>
+        <mat-form-field>
+          <input matInput formControlName="DateCreated"  placeholder="Date DateCreated" i18n-placeholder="Date Created placeholder"/>
+
+          <mat-error>
+            <span *ngIf="!myForm.controls.DateCreated.valid && myForm.controls.DateCreated.touched">Please enter
+              تاريخ</span>
+          </mat-error>
+        </mat-form-field>
+      </td>
+      <td>
+        <select formControlName="TemplateName" (change)="onDocumentSelect($event)">
+          <option i18n="@@ChooseDocument">Choose Document</option>
+          <option *ngFor="let d of documents " [value]="d.templateName">{{d.name}}</option>
+        </select>
+        <mat-error>
+          <span *ngIf="!myForm.controls.TemplateName.valid && myForm.controls.TemplateName.touched">Please enter
+            document name
+          </span>
+        </mat-error>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <mat-label for="CustomerName" class="label" i18n="@@CustomerName">Customer Name</mat-label>
+        <mat-form-field>
+          <input matInput formControlName="CustomerName" />
+          <mat-error>
+            <span *ngIf="!myForm.controls.CustomerName.valid && myForm.controls.CustomerName.touched">Please enter
+              customer name
+            </span>
+          </mat-error>
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field>
+          <input matInput formControlName="WithnessName" placeholder="Withness Name" i18n="@@WithnessName"  i18n-placeholder="Withness Name placeholder" />
+        </mat-form-field>
+      </td>
+    </tr>
+    <tr>
+      <mat-form-field  style="width: 100%;">
+        <textarea matInput placeholder="Subject" rows="2"  i18n="@@Subject"  i18n-placeholder="Subject placeholder"  ></textarea>
+        <mat-error>
+          <span *ngIf="!myForm.controls.Subject.valid && myForm.controls.Subject.touched">
+            Please enter subject text
+          </span>
+        </mat-error>
+    </mat-form-field>
+    </tr>
+  </table>
+  <div>
+    <button mat-raised-button type="submit" [disabled]="myForm.invalid" color="primary" i18n="@@Submit">
+      Submit
+    </button>
+    <button mat-raised-button type="button" color="warn" (click)="resetForm(myForm)" i18n='@@CancelBtn'>
+      reset
+    </button>
+  </div>
+</form>

@@ -1,0 +1,27 @@
+
+  .hide {
+    display: none;
+  }
+  .smallCol{
+      width: 50px;
+  }
+  
+  .mediumCol{
+    width: 120px;
+  }
+  
+  .largeCol{
+    width: 200px;
+  }
+  .card {
+    max-width: 200px;
+    max-height: 100px;
+  }
+  .flexbox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:flex-start;  /*space-between */
+  }
+
+  
